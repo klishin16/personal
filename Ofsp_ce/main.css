@@ -36,12 +36,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #8B8D90;
 }
 .main-container header .auth-links .get-button {
   z-index: 100;
   background: #FFFFFF;
   border-radius: 97px;
   padding: 10px 20px;
+  color: #4DAAF8;
 }
 .main-container header .auth-links .blur {
   position: absolute;

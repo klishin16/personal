@@ -46,12 +46,15 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: #8B8D90;
 
       .get-button {
         z-index: 100;
         background: #FFFFFF;
         border-radius: 97px;
         padding: 10px 20px;
+
+        color: #4DAAF8  ;
       }
 
       .blur {
