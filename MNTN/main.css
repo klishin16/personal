@@ -1,0 +1,227 @@
+body {
+  margin: 0px;
+  font-family: "Merriweather", serif;
+  color: #FFF;
+}
+
+.main-container .first-bg-section {
+  background-image: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url("./assets/img/HG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 80px;
+  padding-right: 80px;
+  position: relative;
+  height: 1113px;
+}
+.main-container .first-bg-section header .navbar {
+  padding-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .first-bg-section header .navbar .logo {
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  flex-basis: 10%;
+}
+.main-container .first-bg-section header .navbar .nav-links {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+}
+.main-container .first-bg-section header .navbar .nav-links .nav-link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+.main-container .first-bg-section header .navbar .nav-links .nav-link + .nav-link {
+  margin-left: 3vw;
+}
+.main-container .first-bg-section header .navbar .auth {
+  flex-basis: 10%;
+  display: flex;
+  align-items: center;
+}
+.main-container .first-bg-section header .navbar .auth .account {
+  margin-left: 0.5vw;
+  font-size: 17px;
+  line-height: 21px;
+}
+.main-container .first-bg-section .offer-container {
+  margin-top: 23vh;
+  display: flex;
+  justify-content: center;
+}
+.main-container .first-bg-section .offer-container .offer {
+  width: fit-content;
+}
+.main-container .first-bg-section .offer-container .offer .pre-title {
+  width: fit-content;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #FBD784;
+}
+.main-container .first-bg-section .offer-container .offer .pre-title::before {
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 3px;
+  border-bottom: 3px solid #FBD784;
+  position: relative;
+  top: -4px;
+  margin-right: 21px;
+}
+.main-container .first-bg-section .offer-container .offer .title-1 {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 100px;
+  text-transform: capitalize;
+  width: fit-content;
+  color: #FFFFFF;
+}
+.main-container .first-bg-section .offer-container .offer .title-2 {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 100px;
+  text-transform: capitalize;
+  width: fit-content;
+  color: #FFFFFF;
+}
+.main-container .first-bg-section .offer-container .offer .sub-title {
+  width: fit-content;
+}
+.main-container .second-bg-section {
+  position: relative;
+}
+.main-container .second-bg-section .second-bg {
+  position: absolute;
+  top: -610px;
+  height: 1422px;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%), url("./assets/img/VG.png"), url("./assets/img/MG.png");
+  background-size: cover, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top 14px, center center, center center;
+}
+.main-container .card-wrapper {
+  position: relative;
+  top: 430px;
+  padding-left: 14vw;
+  padding-right: 14vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #0B1D26;
+}
+.main-container .card-wrapper .card {
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .card-wrapper .card + .card {
+  margin-top: 14vh;
+}
+.main-container .card-wrapper .card .card-offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  max-width: 34vw;
+  margin-left: 3vw;
+  padding-left: 5vw;
+}
+.main-container .card-wrapper .card .card-offer .number {
+  position: absolute;
+  left: -7%;
+  top: -3%;
+  font-weight: bold;
+  font-size: 240px;
+  line-height: 240px;
+  color: #24343D;
+}
+.main-container .card-wrapper .card .card-offer .pre-title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  z-index: 2;
+  color: #FBD784;
+}
+.main-container .card-wrapper .card .card-offer .title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  z-index: 2;
+  color: #FFFFFF;
+}
+.main-container .card-wrapper .card .card-offer .description {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+}
+.main-container .card-wrapper .card .card-offer .sub-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FBD784;
+}
+.main-container .card-wrapper .card .image + .card-offer {
+  margin-left: 70px;
+}
+.main-container footer {
+  padding: 14vw 14vw 14vh;
+  background-color: #0B1D26;
+  position: relative;
+  top: 430px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container footer .left-column {
+  flex-basis: 30%;
+}
+.main-container footer .left-column .title {
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.main-container footer .left-column .desc {
+  margin-top: 5vh;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.main-container footer .left-column .copyright {
+  margin-top: 7vh;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.main-container footer .right-column {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container footer .right-column .on-blog .title, .main-container footer .right-column .on-mntn .title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FBD784;
+}
+.main-container footer .right-column .on-blog .links, .main-container footer .right-column .on-mntn .links {
+  margin-top: 3vh;
+}
+.main-container footer .right-column .on-blog .links .link + .link, .main-container footer .right-column .on-mntn .links .link + .link {
+  margin-top: 2vh;
+}
+
+/*# sourceMappingURL=main.css.map */
