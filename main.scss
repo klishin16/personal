@@ -37,19 +37,32 @@
     align-content: space-between;
     grid-template-columns: repeat(3, 33%);
 
-    .technology-logo {
-      width: 90px;
-      height: 90px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(58, 75, 88, 0.9);
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 7px;
+    .technology-logo-wrapper {
+      .technology-logo {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(58, 75, 88, 0.9);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        transition: all 0.7s;
+      }
+
+      &:hover {
+        .technology-logo {
+          transform: rotate3d(0, 1, 0, 180deg);
+        }
+      }
     }
   }
 }
 
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -166,9 +179,17 @@ body {
     height: 70px;
     display: flex;
     align-items: center;
+    transition: all ease 0.7s;
 
     background: linear-gradient(115.09deg, #2D2C42 35.79%, rgba(58, 75, 88, 0.9) 69.46%);
     box-shadow: 0 7px 7px rgba(58, 75, 88, 0.9);
+    &.navbar-fixed {
+      position: fixed;
+      top: -90px;
+      width: 100%;
+      z-index: 9;
+      transform: translateY(90px);
+    }
 
     .navbar-content {
       width: 100%;
@@ -190,19 +211,41 @@ body {
           justify-content: space-around;
 
           .nav-link {
-            font-size: 18px;
-            line-height: 20px;
+            font-size: 1rem;
+            line-height: 1.4rem;
             display: flex;
             align-items: center;
             text-align: center;
-            //text-transform: uppercase;
+            text-transform: uppercase;
             letter-spacing: 1px;
-
             color: #FFFDFD;
+            position: relative;
 
             &._active-nav-link {
               color: #19f6e8;
             }
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:after {
+              position: absolute;
+              left: 0;
+              top: 1.5rem;
+              content: "";
+              width: 100%;
+              height: 2px;
+              border-bottom: 2px solid whitesmoke;
+              opacity: 0;
+              transition: 0.3s;
+              transform: translateY(50%);
+            }
+            &:hover:after {
+              opacity: 1;
+              transform: translateY(-50%);
+            }
+
           }
         }
       }
@@ -326,6 +369,45 @@ body {
       position: absolute;
       width: 100%;
       height: 100%;
+      @mixin wire-stroke($wire-width) {
+        stroke-dasharray: $wire-width $wire-width;
+        stroke-dashoffset: $wire-width;
+      }
+      @mixin wire-stroke-move() {
+        stroke-dashoffset: 0;
+      }
+
+      .active-wire {
+        transition: all 1s ease;
+        stroke-linecap: round;
+        stroke-width: 3px;
+        stroke: #19f6e8;
+      }
+      .active-wire-1 {
+        @include wire-stroke(400)
+      }
+      .active-wire-2 {
+        @include wire-stroke(840)
+      }
+      .active-wire-3 {
+        @include wire-stroke(300)
+      }
+      .pin-from {
+        transition: all 0.3s ease;
+      }
+      .pin-to {
+        transition: all 0.3s ease 0.8s;
+      }
+
+
+      &.active {
+        .active-wire {
+          @include wire-stroke-move
+        }
+        .pin {
+          r: 5px;
+        }
+      }
     }
   }
 }
@@ -333,8 +415,8 @@ body {
 .main-container {
   padding-top: 10vh;
   padding-bottom: 10vh;
-  background: linear-gradient(124.12deg, rgba(45, 44, 66, 0.91) 18.85%, rgba(62, 73, 82, 0.95) 73.56%);
-  background-size: cover;
+  //background: linear-gradient(124.12deg, rgba(45, 44, 66, 0.91) 18.85%, rgba(62, 73, 82, 0.95) 73.56%);
+  background-color: #343737;
 
   .circle {
     margin-left: 160px;

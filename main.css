@@ -23,6 +23,11 @@
     top: 54%;
   }
 }
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -117,8 +122,16 @@ body {
   height: 70px;
   display: flex;
   align-items: center;
+  transition: all ease 0.7s;
   background: linear-gradient(115.09deg, #2D2C42 35.79%, rgba(58, 75, 88, 0.9) 69.46%);
   box-shadow: 0 7px 7px rgba(58, 75, 88, 0.9);
+}
+.second-screen .navbar.navbar-fixed {
+  position: fixed;
+  top: -90px;
+  width: 100%;
+  z-index: 9;
+  transform: translateY(90px);
 }
 .second-screen .navbar .navbar-content {
   width: 100%;
@@ -139,16 +152,37 @@ body {
   justify-content: space-around;
 }
 .second-screen .navbar .navbar-content .nav-links-wrapper .nav-links .nav-link {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.4rem;
   display: flex;
   align-items: center;
   text-align: center;
+  text-transform: uppercase;
   letter-spacing: 1px;
   color: #FFFDFD;
+  position: relative;
 }
 .second-screen .navbar .navbar-content .nav-links-wrapper .nav-links .nav-link._active-nav-link {
   color: #19f6e8;
+}
+.second-screen .navbar .navbar-content .nav-links-wrapper .nav-links .nav-link:hover {
+  cursor: pointer;
+}
+.second-screen .navbar .navbar-content .nav-links-wrapper .nav-links .nav-link:after {
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px solid whitesmoke;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(50%);
+}
+.second-screen .navbar .navbar-content .nav-links-wrapper .nav-links .nav-link:hover:after {
+  opacity: 1;
+  transform: translateY(-50%);
 }
 .second-screen .second-content-wrapper {
   display: flex;
@@ -218,7 +252,7 @@ body {
   align-content: space-between;
   grid-template-columns: repeat(3, 33%);
 }
-.second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo {
+.second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo-wrapper .technology-logo {
   width: 90px;
   height: 90px;
   display: flex;
@@ -227,6 +261,10 @@ body {
   background: rgba(58, 75, 88, 0.9);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
+  transition: all 0.7s;
+}
+.second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo-wrapper:hover .technology-logo {
+  transform: rotate3d(0, 1, 0, 180deg);
 }
 .second-screen .second-content-wrapper .right-column {
   z-index: 2;
@@ -294,7 +332,7 @@ body {
   align-content: space-between;
   grid-template-columns: repeat(3, 33%);
 }
-.second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo {
+.second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo-wrapper .technology-logo {
   width: 90px;
   height: 90px;
   display: flex;
@@ -303,18 +341,51 @@ body {
   background: rgba(58, 75, 88, 0.9);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
+  transition: all 0.7s;
+}
+.second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo-wrapper:hover .technology-logo {
+  transform: rotate3d(0, 1, 0, 180deg);
 }
 .second-screen .second-content-wrapper .second-content-bg {
   position: absolute;
   width: 100%;
   height: 100%;
 }
+.second-screen .second-content-wrapper .second-content-bg .active-wire {
+  transition: all 1s ease;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  stroke: #19f6e8;
+}
+.second-screen .second-content-wrapper .second-content-bg .active-wire-1 {
+  stroke-dasharray: 400 400;
+  stroke-dashoffset: 400;
+}
+.second-screen .second-content-wrapper .second-content-bg .active-wire-2 {
+  stroke-dasharray: 840 840;
+  stroke-dashoffset: 840;
+}
+.second-screen .second-content-wrapper .second-content-bg .active-wire-3 {
+  stroke-dasharray: 300 300;
+  stroke-dashoffset: 300;
+}
+.second-screen .second-content-wrapper .second-content-bg .pin-from {
+  transition: all 0.3s ease;
+}
+.second-screen .second-content-wrapper .second-content-bg .pin-to {
+  transition: all 0.3s ease 0.8s;
+}
+.second-screen .second-content-wrapper .second-content-bg.active .active-wire {
+  stroke-dashoffset: 0;
+}
+.second-screen .second-content-wrapper .second-content-bg.active .pin {
+  r: 5px;
+}
 
 .main-container {
   padding-top: 10vh;
   padding-bottom: 10vh;
-  background: linear-gradient(124.12deg, rgba(45, 44, 66, 0.91) 18.85%, rgba(62, 73, 82, 0.95) 73.56%);
-  background-size: cover;
+  background-color: #343737;
 }
 .main-container .circle {
   margin-left: 160px;

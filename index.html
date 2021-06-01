@@ -31,15 +31,12 @@
             </div>
             <div class="nav-links-wrapper">
                 <div class="nav-links">
-                    <div class="nav-link _active-nav-link">Резюме</div>
+                    <div class="nav-link _active-nav-link" onclick="scrollToElementBySelector('.second-screen')">Резюме</div>
                     <div class="nav-link">Услуги</div>
-                    <div class="nav-link">Примеры работ</div>
-                    <div class="nav-link">Контакты</div>
+                    <div class="nav-link" onclick="scrollToElementBySelector('.main-container')">Примеры работ</div>
+                    <div class="nav-link" onclick="scrollToElementBySelector('.footer-wrapper')">Контакты</div>
                 </div>
-                <svg class='underline' viewBox='0 0 100 1'>
-                    <line x1='0' x2='100' y1='0' y2='0' stroke-dasharray='20 80' stroke-width="3px"
-                          stroke="whitesmoke"></line>
-                </svg>
+
             </div>
         </div>
     </div>
@@ -58,23 +55,35 @@
                     Backend технологии
                 </div>
                 <div class="logos-wrapper">
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/react-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/react-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo" style="background-color: #F9F7F7;">
-                        <img src="./assets/img/logo/ts-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo" style="background-color: #F9F7F7;">
+                            <img src="./assets/img/logo/ts-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/vue-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/vue-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/html5-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/html5-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/css3-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/css3-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,23 +106,35 @@
                     Frontend технологии
                 </div>
                 <div class="logos-wrapper">
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/react-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/react-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo" style="background-color: #F9F7F7;">
-                        <img src="./assets/img/logo/ts-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo" style="background-color: #F9F7F7;">
+                            <img src="./assets/img/logo/ts-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/vue-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/vue-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/html5-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/html5-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
-                    <div class="technology-logo">
-                        <img src="./assets/img/logo/css3-logo.svg" alt="technology logo" height="70" width="70">
+                    <div class="technology-logo-wrapper">
+                        <div class="technology-logo">
+                            <img src="./assets/img/logo/css3-logo.svg" alt="technology logo" height="70" width="70">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,23 +143,20 @@
         <div class="second-content-bg">
             <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
 
-                <polyline class="wire" stroke="black" points="
-                    1140,160 1090,210 790,210
-                " fill="none"/>
-                <circle r="4" cx="1140" cy="160" stroke="black" fill="white"></circle>
-                <circle class="pin" r="4" cx="790" cy="210" stroke="black" fill="white"></circle>
+                <polyline class="wire" stroke="black" points="1140,160 1090,210 790,210" fill="none"/>
+                <polyline class="active-wire active-wire-1" points="1140,160 1090,210 790,210" fill="none"/>
+                <circle class="pin pin-from" r="4" cx="1140" cy="160" stroke="black" fill="white"></circle>
+                <circle class="pin pin-to" r="4" cx="790" cy="210" stroke="black" fill="white"></circle>
 
-                <polyline class="wire" stroke="black" points="
-                    1170,160 1090,240 910,240 750,410 450,410
-                " fill="none"/>
-                <circle r="4" cx="1170" cy="160" stroke="black" fill="white"></circle>
-                <circle class="pin" r="4" cx="450" cy="410" stroke="black" fill="white"></circle>
+                <polyline class="wire" stroke="black" points="1170,160 1090,240 910,240 750,410 450,410" fill="none"/>
+                <polyline class="active-wire active-wire-2" points="1170,160 1090,240 910,240 750,410 450,410" fill="none"/>
+                <circle class="pin pin-from" r="4" cx="1170" cy="160" stroke="black" fill="white"></circle>
+                <circle class="pin pin-to" r="4" cx="450" cy="410" stroke="black" fill="white"></circle>
 
-                <polyline class="wire" stroke="black" points="
-                    1200,160 1090,270 1050,270 1000,320
-                " fill="none"/>
-                <circle r="4" cx="1200" cy="160" stroke="black" fill="white"></circle>
-                <circle class="pin" r="4" cx="1000" cy="320" stroke="black" fill="white"></circle>
+                <polyline class="wire" stroke="black" points="1200,160 1090,270 1050,270 1000,320" fill="none"/>
+                <polyline class="active-wire active-wire-3" points="1200,160 1090,270 1050,270 1000,320" fill="none"/>
+                <circle class="pin pin-from" r="4" cx="1200" cy="160" stroke="black" fill="white"></circle>
+                <circle class="pin pin-to" r="4" cx="1000" cy="320" stroke="black" fill="white"></circle>
             </svg>
         </div>
     </div>
