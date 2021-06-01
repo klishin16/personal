@@ -11,8 +11,47 @@
   to {top: 54%}
 }
 
+@mixin technologies-cards {
+  width: 480px;
+  height: 270px;
+  background: #FFFFFF;
+  box-shadow: 7px 5px 7px #ECEEF1;
+  border-radius: 21px;
+
+  .title {
+    padding-top: 15px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .logos-wrapper {
+    margin-top: 12px;
+    height: 70%;
+
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+    grid-template-columns: repeat(3, 33%);
+
+    .technology-logo {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(58, 75, 88, 0.9);
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 7px;
+    }
+  }
+}
+
 body {
-  margin: 0px;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -87,6 +126,7 @@ body {
     position: absolute;
     bottom: 5vh;
     left: 50%;
+    cursor: pointer;
 
     img {
       position: relative;
@@ -116,6 +156,177 @@ body {
     //&:hover::after {
     //  opacity: 0.1;
     //}
+  }
+}
+
+.second-screen {
+  background: #F4F7FA;
+
+  .navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(115.09deg, #2D2C42 35.79%, rgba(58, 75, 88, 0.9) 69.46%);
+    box-shadow: 0 7px 7px rgba(58, 75, 88, 0.9);
+
+    .navbar-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        margin-left: 3vw;
+      }
+
+      .nav-links-wrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        .nav-links {
+          display: flex;
+          justify-content: space-around;
+
+          .nav-link {
+            font-size: 18px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            //text-transform: uppercase;
+            letter-spacing: 1px;
+
+            color: #FFFDFD;
+
+            &._active-nav-link {
+              color: #19f6e8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .second-content-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+
+    position: relative;
+
+    .left-column {
+      z-index: 2;
+      margin-left: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .resume-card {
+        margin-top: 100px;
+        width: 610px;
+        height: 270px;
+        background: #FFFFFF;
+        box-shadow: 7px 5px 7px #ECEEF1;
+        border-radius: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+          margin-top: 15px;
+          width: 100%;
+          font-weight: normal;
+          font-size: 43px;
+          line-height: 48px;
+          text-align: center;
+
+          color: #000000;
+        }
+
+        .desc {
+          margin-top: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: 18px;
+          line-height: 29px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+
+          color: #000000;
+        }
+      }
+
+      .backend-card {
+        margin-top: 70px;
+        margin-bottom: 120px;
+
+        @include technologies-cards;
+      }
+
+    }
+
+    .right-column {
+      z-index: 2;
+      .switcher-wrapper {
+        margin-top: 8vh;
+        margin-right: 3vw;
+        display: flex;
+        justify-content: flex-end;
+
+
+        .switcher {
+          margin-top: 30px;
+          margin-left: 20px;
+          width: 180px;
+          padding: 0 14px;
+          height: 70px;
+          background-image: url("./assets/img/switcher-bg.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: flex;
+          align-items: center;
+          .switcher-btn {
+            width: 50%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &.pressed {
+              background-image: url("./assets/img/switcher-btn.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position-y: center;
+            }
+
+            span {
+              display: inline-block;
+              font-size: 10px;
+              line-height: 14px;
+              text-align: center;
+
+              color: #8F9BB2;
+            }
+          }
+        }
+      }
+      .frontend-card {
+        margin-top: 191px;
+
+        @include technologies-cards;
+
+      }
+    }
+
+    .second-content-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -174,6 +385,70 @@ body {
       }
     }
   }
+
+  .test {
+    background-color: #343737;
+
+    .svg-wrapper {
+      //position: relative;
+      //top: 50%;
+      //transform: translateY(-50%);
+      margin: 0 auto;
+      width: 320px;
+    }
+    .shape {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+      fill: transparent;
+      stroke: #19f6e8;
+      border-bottom: 5px solid black;
+      transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+    .text {
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: 8px;
+      color: #fff;
+      top: -48px;
+      position: relative;
+      text-align: center;
+    }
+    .svg-wrapper:hover .shape {
+      stroke-width: 2px;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 760;
+    }
+
+    .svg-wr {
+      margin-left: 7vw;
+
+      .wire {
+        transition: all 1s ease;
+        stroke-linecap: round;
+        stroke-dasharray: 0 200;
+        //stroke-dashoffset: -10;
+      }
+      .pin {
+        transition: all 0.5s ease 0.9s;
+      }
+
+
+      &:hover {
+
+        .wire {
+          stroke-width: 3px;
+          //stroke-dashoffset: 50;
+          stroke-dasharray: 210;
+        }
+        .pin {
+          r: 7px;
+        }
+      }
+    }
+
+  }
+
 }
 
 footer {
