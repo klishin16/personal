@@ -1,14 +1,29 @@
+@import "./css/modal.css";
 @keyframes blink {
-  from {opacity: 0.1}
-  20% {opacity: 1}
-  70% {opacity: 0.0}
-  to {opacity: 0.0}
+  from {
+    opacity: 0.1
+  }
+  20% {
+    opacity: 1
+  }
+  70% {
+    opacity: 0.0
+  }
+  to {
+    opacity: 0.0
+  }
 }
 
 @keyframes move {
-  from {top: 36%}
-  70% {top: 54%}
-  to {top: 54%}
+  from {
+    top: 36%
+  }
+  70% {
+    top: 54%
+  }
+  to {
+    top: 54%
+  }
 }
 
 @mixin technologies-cards {
@@ -63,6 +78,7 @@ html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -91,8 +107,8 @@ body {
       flex-direction: column;
 
       .pre-title {
-        font-weight: normal;
-        font-size: 54px;
+        font-weight: 400;
+        font-size: 3.2rem;
         line-height: 66px;
         display: flex;
         align-items: center;
@@ -102,9 +118,9 @@ body {
 
       .title-1 {
         margin-top: 3vh;
-        font-weight: normal;
-        font-size: 36px;
-        line-height: 44px;
+        font-weight: 300;
+        font-size: 2.1rem;
+        line-height: 2.5rem;
         display: flex;
         align-items: center;
 
@@ -113,9 +129,10 @@ body {
 
       .title-2 {
         margin-top: 2vh;
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 59px;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 3.8rem;
+        letter-spacing: 0.1rem;
         display: flex;
         align-items: center;
 
@@ -124,7 +141,7 @@ body {
 
       .sub-title {
         margin-top: 2vh;
-        font-weight: 500;
+        font-weight: 300;
         font-size: 24px;
         line-height: 29px;
         display: flex;
@@ -149,7 +166,7 @@ body {
 
     &::after {
       position: absolute;
-      left: -15px;
+      left: 20px;
       top: 30%;
       display: block;
       content: "";
@@ -183,6 +200,7 @@ body {
 
     background: linear-gradient(115.09deg, #2D2C42 35.79%, rgba(58, 75, 88, 0.9) 69.46%);
     box-shadow: 0 7px 7px rgba(58, 75, 88, 0.9);
+
     &.navbar-fixed {
       position: fixed;
       top: -90px;
@@ -241,6 +259,7 @@ body {
               transition: 0.3s;
               transform: translateY(50%);
             }
+
             &:hover:after {
               opacity: 1;
               transform: translateY(-50%);
@@ -313,6 +332,7 @@ body {
 
     .right-column {
       z-index: 2;
+
       .switcher-wrapper {
         margin-top: 8vh;
         margin-right: 3vw;
@@ -331,6 +351,7 @@ body {
           background-size: contain;
           display: flex;
           align-items: center;
+
           .switcher-btn {
             width: 50%;
             height: 80%;
@@ -357,6 +378,7 @@ body {
           }
         }
       }
+
       .frontend-card {
         margin-top: 191px;
 
@@ -383,18 +405,23 @@ body {
         stroke-width: 3px;
         stroke: #19f6e8;
       }
+
       .active-wire-1 {
         @include wire-stroke(400)
       }
+
       .active-wire-2 {
         @include wire-stroke(840)
       }
+
       .active-wire-3 {
         @include wire-stroke(300)
       }
+
       .pin-from {
         transition: all 0.3s ease;
       }
+
       .pin-to {
         transition: all 0.3s ease 0.8s;
       }
@@ -404,6 +431,7 @@ body {
         .active-wire {
           @include wire-stroke-move
         }
+
         .pin {
           r: 5px;
         }
@@ -435,7 +463,7 @@ body {
       border-bottom: 3px solid whitesmoke;
       border-right: 3px solid whitesmoke;
       border-bottom-left-radius: 5%;
-      transition:  0.8s ease;
+      transition: 0.8s ease;
       transform: rotate(45deg);
     }
   }
@@ -478,6 +506,7 @@ body {
       margin: 0 auto;
       width: 320px;
     }
+
     .shape {
       stroke-dasharray: 140 540;
       stroke-dashoffset: -474;
@@ -487,6 +516,7 @@ body {
       border-bottom: 5px solid black;
       transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
     }
+
     .text {
       font-size: 22px;
       line-height: 32px;
@@ -496,40 +526,18 @@ body {
       position: relative;
       text-align: center;
     }
+
     .svg-wrapper:hover .shape {
       stroke-width: 2px;
       stroke-dashoffset: 0;
       stroke-dasharray: 760;
     }
 
-    .svg-wr {
-      margin-left: 7vw;
-
-      .wire {
-        transition: all 1s ease;
-        stroke-linecap: round;
-        stroke-dasharray: 0 200;
-        //stroke-dashoffset: -10;
-      }
-      .pin {
-        transition: all 0.5s ease 0.9s;
-      }
-
-
-      &:hover {
-
-        .wire {
-          stroke-width: 3px;
-          //stroke-dashoffset: 50;
-          stroke-dasharray: 210;
-        }
-        .pin {
-          r: 7px;
-        }
-      }
-    }
-
   }
+
+}
+
+.test {
 
 }
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Klishin Nikita</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -19,7 +19,9 @@
     </div>
 
     <div class="scroll-icon">
-        <img src="./assets/img/scroll-ellipse.svg" alt="scroll-ellipse" width="70" height="70">
+        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="35" cy="35" r="32.5" stroke="#FFFDFD" stroke-width="5" opacity="0.9"/>
+        </svg>
     </div>
 </section>
 
@@ -162,7 +164,8 @@
     </div>
 </section>
 
-<div class="main-container">
+<!--TODO Преписать id на нужный элемент-->
+<div class="main-container" id="work-examples">
     <section>
         <div class="my-markups">
             <div class="simple-card">
@@ -187,20 +190,28 @@
                 <div class="text">WEB DEVELOPER</div>
             </svg>
         </div>
-        <div class="svg-wr">
-            <svg height="50" width="300" xmlns="http://www.w3.org/2000/svg">
-                <polyline class="wire" stroke="blue" points="
-                    5,20 100,20 110,10 210,10
-                " fill="none"/>
-                <circle r="4" cx="5" cy="20" stroke="white" fill="blue"></circle>
-                <circle class="pin" r="4" cx="210" cy="10" stroke="white" fill="blue"></circle>
-            </svg>
+        <a href="#openModal">Открыть модальное окно</a>
+        <div id="openModal" class="modalDialog">
+            <div class="close-line-1"></div>
+            <div class="modalClose">
+                <a href="#close" title="Закрыть" class="close">
+                    <svg height="70" width="70" xmlns="http://www.w3.org/2000/svg">
+                        <polyline stroke="white" points="15,15 35,35" fill="none" stroke-width="2"/>
+                        <polyline stroke="white" points="15,55 35,35" fill="none" stroke-width="2"/>
+                        <polyline stroke="white" points="55,55 35,35" fill="none" stroke-width="2"/>
+                        <polyline stroke="white" points="55,15 35,35" fill="none" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="modal-content-wrapper">
+                <div class="modal-content">
+                    <h2>Модальное окно</h2>
+                    <p>Пример простого модального окна, которое может быть создано с использованием CSS3.</p>
+                    <p>Его можно использовать в широком диапазоне, начиная от вывода сообщений и заканчивая формой регистрации.</p>
+                </div>
+            </div>
+            <div class="close-line-2"></div>
         </div>
-        <!--        <svg viewBox='0 0 100 100'>-->
-        <!--            <rect x='10' y='10' height='80' width='80'-->
-        <!--                  fill='none' stroke='#fff' stroke-width='5' stroke-linecap='round'-->
-        <!--                  stroke-dasharray='80 240' stroke-dashoffset='0' />-->
-        <!--        </svg>-->
     </section>
 </div>
 
@@ -215,5 +226,6 @@
     </div>
 </footer>
 <script src="./main.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 </html>

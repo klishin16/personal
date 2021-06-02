@@ -1,3 +1,4 @@
+@import "./css/modal.css";
 @keyframes blink {
   from {
     opacity: 0.1;
@@ -53,8 +54,8 @@ body {
   flex-direction: column;
 }
 .first-screen .offer-wrapper .offer .pre-title {
-  font-weight: normal;
-  font-size: 54px;
+  font-weight: 400;
+  font-size: 3.2rem;
   line-height: 66px;
   display: flex;
   align-items: center;
@@ -62,25 +63,26 @@ body {
 }
 .first-screen .offer-wrapper .offer .title-1 {
   margin-top: 3vh;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 44px;
+  font-weight: 300;
+  font-size: 2.1rem;
+  line-height: 2.5rem;
   display: flex;
   align-items: center;
   color: #FFFDFD;
 }
 .first-screen .offer-wrapper .offer .title-2 {
   margin-top: 2vh;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 59px;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3.8rem;
+  letter-spacing: 0.1rem;
   display: flex;
   align-items: center;
   color: #F9F7F7;
 }
 .first-screen .offer-wrapper .offer .sub-title {
   margin-top: 2vh;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 24px;
   line-height: 29px;
   display: flex;
@@ -100,7 +102,7 @@ body {
 }
 .first-screen .scroll-icon::after {
   position: absolute;
-  left: -15px;
+  left: 20px;
   top: 30%;
   display: block;
   content: "";
@@ -460,24 +462,6 @@ body {
   stroke-width: 2px;
   stroke-dashoffset: 0;
   stroke-dasharray: 760;
-}
-.main-container .test .svg-wr {
-  margin-left: 7vw;
-}
-.main-container .test .svg-wr .wire {
-  transition: all 1s ease;
-  stroke-linecap: round;
-  stroke-dasharray: 0 200;
-}
-.main-container .test .svg-wr .pin {
-  transition: all 0.5s ease 0.9s;
-}
-.main-container .test .svg-wr:hover .wire {
-  stroke-width: 3px;
-  stroke-dasharray: 210;
-}
-.main-container .test .svg-wr:hover .pin {
-  r: 7px;
 }
 
 footer {
