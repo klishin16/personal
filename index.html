@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Klishin Nikita</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -33,9 +34,11 @@
             </div>
             <div class="nav-links-wrapper">
                 <div class="nav-links">
-                    <div class="nav-link _active-nav-link" onclick="scrollToElementBySelector('.second-screen')">Резюме</div>
-                    <div class="nav-link">Услуги</div>
-                    <div class="nav-link" onclick="scrollToElementBySelector('.main-container')">Примеры работ</div>
+                    <div class="nav-link _active-nav-link" onclick="scrollToElementBySelector('.second-screen')">
+                        Резюме
+                    </div>
+                    <div class="nav-link" onclick="scrollToElementBySelector('#services')">Услуги</div>
+                    <div class="nav-link" onclick="scrollToElementBySelector('#work-examples')">Примеры работ</div>
                     <div class="nav-link" onclick="scrollToElementBySelector('.footer-wrapper')">Контакты</div>
                 </div>
 
@@ -79,7 +82,8 @@
                     </div>
                     <div class="technology-logo-wrapper">
                         <div class="technology-logo">
-                            <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70" width="70">
+                            <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70"
+                                 width="70">
                         </div>
                     </div>
                     <div class="technology-logo-wrapper">
@@ -130,7 +134,8 @@
                     </div>
                     <div class="technology-logo-wrapper">
                         <div class="technology-logo">
-                            <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70" width="70">
+                            <img src="./assets/img/logo/bootstrap-logo.svg" alt="technology logo" height="70"
+                                 width="70">
                         </div>
                     </div>
                     <div class="technology-logo-wrapper">
@@ -151,7 +156,8 @@
                 <circle class="pin pin-to" r="4" cx="790" cy="210" stroke="black" fill="white"></circle>
 
                 <polyline class="wire" stroke="black" points="1170,160 1090,240 910,240 750,410 450,410" fill="none"/>
-                <polyline class="active-wire active-wire-2" points="1170,160 1090,240 910,240 750,410 450,410" fill="none"/>
+                <polyline class="active-wire active-wire-2" points="1170,160 1090,240 910,240 750,410 450,410"
+                          fill="none"/>
                 <circle class="pin pin-from" r="4" cx="1170" cy="160" stroke="black" fill="white"></circle>
                 <circle class="pin pin-to" r="4" cx="450" cy="410" stroke="black" fill="white"></circle>
 
@@ -165,60 +171,126 @@
 </section>
 
 <!--TODO Преписать id на нужный элемент-->
-<div class="main-container" id="work-examples">
-    <section>
-        <div class="my-markups">
+<section class="work-examples-screen" id="work-examples">
+    <div class="my-markups">
+        <a class="simple-card-wrapper" href="./First-course/index.html">
             <div class="simple-card">
-                <a href="./First-course/index.html">First course</a>
+                First course
             </div>
-            <div class="simple-card">
-                <a href="./Ofsp_ce/index.html">Ofsp_ce</a>
-            </div>
-            <div class="simple-card">
-                <a href="./MNTN/index.html">MNTN</a>
-            </div>
+        </a>
 
-            <!--            <div class="simple-card">-->
-            <!--                <a href="./MNTN/index.html">MNTN</a>-->
-            <!--            </div>-->
-        </div>
-    </section>
-    <section class="test">
-        <div class="svg-wrapper">
-            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-                <rect class="shape" height="60" width="320"/>
-                <div class="text">WEB DEVELOPER</div>
-            </svg>
-        </div>
-        <a href="#openModal">Открыть модальное окно</a>
-        <div id="openModal" class="modalDialog">
-            <div class="close-line-1"></div>
-            <div class="modalClose">
-                <a href="#close" title="Закрыть" class="close">
-                    <svg height="70" width="70" xmlns="http://www.w3.org/2000/svg">
-                        <polyline stroke="white" points="15,15 35,35" fill="none" stroke-width="2"/>
-                        <polyline stroke="white" points="15,55 35,35" fill="none" stroke-width="2"/>
-                        <polyline stroke="white" points="55,55 35,35" fill="none" stroke-width="2"/>
-                        <polyline stroke="white" points="55,15 35,35" fill="none" stroke-width="2"/>
-                    </svg>
-                </a>
+        <a class="simple-card-wrapper" href="./Ofsp_ce/index.html">
+            <div class="simple-card">
+                Ofsp_ce
             </div>
-            <div class="modal-content-wrapper">
-                <div class="modal-content">
-                    <h2>Модальное окно</h2>
-                    <p>Пример простого модального окна, которое может быть создано с использованием CSS3.</p>
-                    <p>Его можно использовать в широком диапазоне, начиная от вывода сообщений и заканчивая формой регистрации.</p>
+        </a>
+
+        <a class="simple-card-wrapper" href="./MNTN/index.html">
+            <div class="simple-card">
+                MNTN
+            </div>
+        </a>
+
+
+        <!--            <div class="simple-card">-->
+        <!--                <a href="./MNTN/index.html">MNTN</a>-->
+        <!--            </div>-->
+    </div>
+</section>
+<section class="service-screen" id="services">
+    <div class="service-container">
+        <div class="service-list-container">
+            <div class="service-list">
+                <div class="service-list-title">
+                    <span>Услуги</span>
                 </div>
+                <ul class="service-list-content">
+                    <li class="list-item"><span>Backend</span>
+                        <ul class="inner-list">
+                            <li class="inner-list-item"><span>ExpressJS</span></li>
+                            <li class="inner-list-item"><span>NestJS</span></li>
+                            <li class="inner-list-item"><span>Django</span></li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><span>Frontend</span>
+                        <ul class="inner-list">
+                            <li class="inner-list-item"><span>Landing Pages</span></li>
+                            <li class="inner-list-item"><span>Shops</span></li>
+                            <li class="inner-list-item"><span>Mobile adaptation</span></li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><span>Markup</span>
+                        <ul class="inner-list">
+                            <li class="inner-list-item"><span>Template markup</span></li>
+                            <li class="inner-list-item"><span>Animation</span></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div class="close-line-2"></div>
         </div>
-    </section>
-</div>
+        <div class="monitor-wrapper">
+            <!--                todo fix width & height-->
+            <img src="./assets/img/coding-monitor-svgrepo-com.svg" alt="Coding monitor image" width="500" height="300">
+        </div>
+    </div>
+</section>
+<section class="contacts-screen">
+    <div class="title-wrapper">
+        <div class="title">CONTACTS</div>
+    </div>
+    <div class="contacts-wrapper">
+        <div class="contacts-card">
+            <div class="contact-logo">
+                <img src="./assets/img/vk-icon.svg" alt="vk-icon" width="40" height="40">
+            </div>
+            <div class="contact-text">@klishin_nd</div>
+        </div>
+        <div class="contacts-card">
+            <div class="contact-text">klishin.nd16@gmail.com</div>
+        </div>
+        <div class="contacts-card">
+            <div class="contact-logo">
+                <img src="./assets/img/tg-icon.svg" alt="vk-icon" width="40" height="40">
+            </div>
+            <div class="contact-text">@klishin_nd</div>
+        </div>
+    </div>
+</section>
+<!--    <section class="test">-->
+<!--        <div class="svg-wrapper">-->
+<!--            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">-->
+<!--                <rect class="shape" height="60" width="320"/>-->
+<!--                <div class="text">WEB DEVELOPER</div>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--        <a href="#openModal">Открыть модальное окно</a>-->
+<!--        <div id="openModal" class="modalDialog">-->
+<!--            <div class="close-line-1"></div>-->
+<!--            <div class="modalClose">-->
+<!--                <a href="#close" title="Закрыть" class="close">-->
+<!--                    <svg height="70" width="70" xmlns="http://www.w3.org/2000/svg">-->
+<!--                        <polyline stroke="white" points="15,15 35,35" fill="none" stroke-width="2"/>-->
+<!--                        <polyline stroke="white" points="15,55 35,35" fill="none" stroke-width="2"/>-->
+<!--                        <polyline stroke="white" points="55,55 35,35" fill="none" stroke-width="2"/>-->
+<!--                        <polyline stroke="white" points="55,15 35,35" fill="none" stroke-width="2"/>-->
+<!--                    </svg>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="modal-content-wrapper">-->
+<!--                <div class="modal-content">-->
+<!--                    <h2>Модальное окно</h2>-->
+<!--                    <p>Пример простого модального окна, которое может быть создано с использованием CSS3.</p>-->
+<!--                    <p>Его можно использовать в широком диапазоне, начиная от вывода сообщений и заканчивая формой регистрации.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="close-line-2"></div>-->
+<!--        </div>-->
+<!--    </section>-->
 
 <footer>
     <div class="footer-wrapper">
         <div class="left-column">
-            Сайт находится в разработке :)
+            Сайт находится в разработке
         </div>
         <div class="right-column">
             Email: <a href="mailto:klishin.nd16@gmail.com">klishin.nd16@gmail.com</a>

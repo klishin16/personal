@@ -166,7 +166,7 @@ body {
 
     &::after {
       position: absolute;
-      left: 20px;
+      left: 21px;
       top: 30%;
       display: block;
       content: "";
@@ -231,11 +231,11 @@ body {
           .nav-link {
             font-size: 1rem;
             line-height: 1.4rem;
+            letter-spacing: 0.18rem;
             display: flex;
             align-items: center;
             text-align: center;
             text-transform: uppercase;
-            letter-spacing: 1px;
             color: #FFFDFD;
             position: relative;
 
@@ -440,12 +440,11 @@ body {
   }
 }
 
-.main-container {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+.work-examples-screen {
+  padding-top: 16vh;
+  padding-bottom: 5vh;
   //background: linear-gradient(124.12deg, rgba(45, 44, 66, 0.91) 18.85%, rgba(62, 73, 82, 0.95) 73.56%);
   background-color: #343737;
-
   .circle {
     margin-left: 160px;
     border: 3px solid whitesmoke;
@@ -473,25 +472,28 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 
-    .simple-card {
-      margin: 5vh 5vw;
-      width: 300px;
-      height: 450px;
-      background-color: gray;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 2%;
-      transition: all 0.4s ease-in-out;
+    .simple-card-wrapper {
+      display: block;
+      text-decoration: none;
+      .simple-card {
+        margin: 5vh 5vw;
+        width: 300px;
+        height: 450px;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2%;
+        transition: all 0.4s ease-in-out;
 
-      a {
         font-size: 34px;
         color: whitesmoke;
-        text-decoration: none;
-      }
 
-      &:hover {
-        transform: scale(1.1);
+
+
+        &:hover {
+          transform: scale(1.07);
+        }
       }
     }
   }
@@ -537,12 +539,161 @@ body {
 
 }
 
+.service-screen {
+  background-color: #343737;
+  height: 100vh;
+  .service-container {
+    display: flex;
+    justify-content: space-between;
+    .service-list-container {
+      margin-left: 9vw;
+      margin-top: 25vh;
+      .service-list {
+        width: 450px;
+        .service-list-title {
+          height: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #ECBA16;
+          & > span {
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 3.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.045em;
+            color: #38454F;
+          }
+        }
+        .service-list-content {
+          list-style: none;
+          margin: 0;
+          padding-left: 0;
+          .list-item {
+            width: 100%;
+            height: 70px;
+            background-color: #3A4B58;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            & > span {
+              font-weight: 400;
+              font-size: 36px;
+              line-height: 44px;
+              color: #FFFDFD;
+            }
+            &:hover {
+              background-color: #E55555;
+              .inner-list {
+                display: block;
+              }
+            }
+            .inner-list {
+              display: none;
+              position: absolute;
+              top: 0;
+              left: 450px; //todo сделать зависимость
+              width: 300px;
+              list-style: none;
+              padding-left: 0;
+              .inner-list-item {
+                height: 70px;
+                background: #0B1D26;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                //transition: all 0.3s ease;
+                & > span {
+                  font-weight: 400;
+                  font-size: 1.8rem;
+                  line-height: 3rem;
+                  color: #FFFDFD;
+                }
+                & + .inner-list-item {
+                  border-top: 1px solid #00d9ff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .monitor-wrapper {
+      margin-right: 9vw;
+      margin-top: 23vh;
+    }
+  }
+}
+
+.contacts-screen {
+  background-color: #343737;
+  .title-wrapper {
+    display: flex;
+    justify-content: center;
+    .title {
+      font-size: 2.1rem;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.3rem;
+      color: white;
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: -38vw;
+        content: "";
+        border-bottom: 1px solid white;
+        width: 36vw;
+      }
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: -38vw;
+        content: "";
+        border-bottom: 1px solid white;
+        width: 36vw;
+      }
+    }
+  }
+
+  .contacts-wrapper {
+    margin-top: 7vh;
+    padding-bottom: 11vh;
+    display: flex;
+    justify-content: space-around;
+    .contacts-card {
+      width: 25vw;
+      height: 7vh;
+      background: #38454F;
+      display: flex;
+      justify-content: space-around;
+      .contact-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .contact-text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFDFD;
+      }
+    }
+  }
+}
+
 .test {
 
 }
 
 footer {
-  height: 15vh;
+  height: 7vh;
   background-color: #0B1D26;
 
   .footer-wrapper {
@@ -552,16 +703,16 @@ footer {
     align-items: center;
 
     .left-column {
+      font-weight: 300;
       margin-left: 9vw;
       font-size: 25px;
-      font-weight: 700;
       color: whitesmoke;
     }
 
     .right-column {
       margin-right: 9vw;
       font-size: 25px;
-      font-weight: 700;
+      font-weight: 300;
       color: whitesmoke;
 
       a {
