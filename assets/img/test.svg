@@ -1,0 +1,13 @@
+<svg height="100" width="100" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="100" height="100" fill="#FFF" />
+    <rect id="rec" width="50" height="50" fill="#BBC42A" rx="5"/>
+     <animate
+             xlink:href="#rec"
+             attributeName="opacity"
+             from="1"
+             to="0"
+             dur="1s"
+             repeatCount="indefinite"
+     />
+</svg>
+
