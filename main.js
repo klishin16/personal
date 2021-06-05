@@ -1,3 +1,61 @@
+"use strict";
+import { Anime } from "./js/Anime.js";
+//------------app loader------------
+const loader = document.querySelector(".loader")
+const loaderInner = document.querySelector(".loader-inner")
+const loaderLine = document.querySelector(".loader-line")
+const loadStart = new Date()
+const fullAnimationTime = 2000; //mseconds
+
+
+const loaderLineLength = 282.84
+const loaderAnime = new Anime()
+    .setDraw(progress => {
+        const offset = Math.round(progress*loaderLineLength)
+        loaderLine.style.strokeDashoffset = offset.toString()
+    })
+    .setTiming((_ => _))
+    .setDuration(2100)
+    .setRepeat(true)
+    .start()
+
+window.onload = () => {
+    console.log("Loaded!")
+    loaderAnime.setDraw(progress => {
+            const offset = Math.round(progress*loaderLineLength)
+            const width = Math.round(-progress * 20 + loaderLineLength / 2)
+            loaderLine.style.strokeDashoffset = offset.toString()
+            const v = `${width} ${Math.round(loaderLineLength - width)}`
+            console.log(v)
+            loaderLine.style.strokeDasharray = v
+        })
+        .setRepeat(false)
+        .setOnAnimeFinished(() => {
+            setTimeout(() => {
+                loader.classList.add("hide")
+                setTimeout(() => {
+                    loader.classList.add("hidden")
+                }, 700)
+            }, 500)
+        })
+}
+//     setTimeout(() => {
+//         //todo cascade timeouts
+//         const currentIterAnimTime = (new Date() - loadStart) % fullAnimationTime
+//         // loaderLine.classList.add("trans")
+//         // setTimeout(() => {
+//         //     loaderLine.style.animationPlayState = "paused"
+//         // }, 1950 - currentIterAnimTime + fullAnimationTime)
+//         // setTimeout(() => {
+//         //     loader.classList.add("hide")
+//         // }, 10000)
+//         // setTimeout(() => {
+//         //     loader.classList.add("hidden")
+//         // }, 10500)
+//     }, 1000)
+// }
+
+//-----------------
 const scrollElem = document.querySelector('.scroll-icon');
 scrollElem.addEventListener("click", () => {
     console.log("Click!")

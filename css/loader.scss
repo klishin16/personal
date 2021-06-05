@@ -1,0 +1,31 @@
+.loader {
+  background: none repeat scroll 0 0 #343737;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  transition: opacity 0.5s ease;
+  &.hide {
+    opacity: 0;
+  }
+  &.hidden {
+    display: none;
+  }
+
+  .loader-inner {
+    height: 120px;
+    width: 120px;
+    margin-top: -60px;
+    margin-left: -60px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    .loader-line {
+      stroke-dasharray: 141 142;
+    }
+  }
+}
