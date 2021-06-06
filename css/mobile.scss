@@ -1,0 +1,56 @@
+@import './mixins';
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  .second-screen {
+    .second-content-wrapper {
+      .second-content-bg {
+        display: none;
+      }
+      .left-column {
+        .backend-card {
+          @include technologies-cards(390px, 230px);
+        }
+      }
+      .right-column {
+        .frontend-card {
+          @include technologies-cards(390px, 230px);
+        }
+      }
+    }
+  }
+  .service-screen {
+    .service-container {
+      .monitor-wrapper {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+  .second-screen {
+    .second-content-wrapper {
+      .left-column {
+        .resume-card {
+          width: 500px;
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+}

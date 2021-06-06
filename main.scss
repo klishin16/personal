@@ -1,4 +1,5 @@
 @import "./css/modal.css";
+@import './css/mixins';
 @keyframes blink {
   from {
     opacity: 0.1
@@ -26,54 +27,6 @@
   }
 }
 
-@mixin technologies-cards {
-  width: 480px;
-  height: 270px;
-  background: #FFFFFF;
-  box-shadow: 7px 5px 7px #ECEEF1;
-  border-radius: 21px;
-
-  .title {
-    padding-top: 15px;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 41px;
-    text-align: center;
-
-    color: #000000;
-  }
-
-  .logos-wrapper {
-    margin-top: 12px;
-    height: 70%;
-
-    display: grid;
-    justify-items: center;
-    align-content: space-between;
-    grid-template-columns: repeat(3, 33%);
-
-    .technology-logo-wrapper {
-      .technology-logo {
-        width: 90px;
-        height: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(58, 75, 88, 0.9);
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 7px;
-        transition: all 0.7s;
-      }
-
-      &:hover {
-        .technology-logo {
-          transform: rotate3d(0, 1, 0, 180deg);
-        }
-      }
-    }
-  }
-}
-
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -88,6 +41,7 @@ body {
   height: 100vh;
 
   background-image: url("./assets/img/BG1.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
@@ -300,8 +254,8 @@ body {
           margin-top: 15px;
           width: 100%;
           font-weight: normal;
-          font-size: 43px;
-          line-height: 48px;
+          font-size: 2.5rem;
+          line-height: 3rem;
           text-align: center;
 
           color: #000000;
@@ -311,8 +265,8 @@ body {
           margin-top: 25px;
           padding-left: 15px;
           padding-right: 15px;
-          font-size: 18px;
-          line-height: 29px;
+          font-size: 1.1rem;
+          line-height: 1.6rem;
           display: flex;
           align-items: center;
           text-align: center;
@@ -325,7 +279,7 @@ body {
         margin-top: 70px;
         margin-bottom: 120px;
 
-        @include technologies-cards;
+        @include technologies-cards(480px, 270px);
       }
 
     }
@@ -382,8 +336,7 @@ body {
       .frontend-card {
         margin-top: 191px;
 
-        @include technologies-cards;
-
+        @include technologies-cards(480px, 270px);
       }
     }
 
@@ -580,8 +533,8 @@ body {
 
             & > span {
               font-weight: 400;
-              font-size: 36px;
-              line-height: 44px;
+              font-size: 2.5rem;
+              line-height: 3.4rem;
               color: #FFFDFD;
             }
             &:hover {

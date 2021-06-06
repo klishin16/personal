@@ -37,6 +37,7 @@ body {
 .first-screen {
   height: 100vh;
   background-image: url("./assets/img/BG1.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -213,8 +214,8 @@ body {
   margin-top: 15px;
   width: 100%;
   font-weight: normal;
-  font-size: 43px;
-  line-height: 48px;
+  font-size: 2.5rem;
+  line-height: 3rem;
   text-align: center;
   color: #000000;
 }
@@ -222,8 +223,8 @@ body {
   margin-top: 25px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 18px;
-  line-height: 29px;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -241,8 +242,8 @@ body {
 .second-screen .second-content-wrapper .left-column .backend-card .title {
   padding-top: 15px;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 41px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
   text-align: center;
   color: #000000;
 }
@@ -251,12 +252,16 @@ body {
   height: 70%;
   display: grid;
   justify-items: center;
-  align-content: space-between;
   grid-template-columns: repeat(3, 33%);
 }
+.second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo-wrapper .technology-logo {
-  width: 90px;
-  height: 90px;
+  width: 57%;
+  height: 94%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,8 +326,8 @@ body {
 .second-screen .second-content-wrapper .right-column .frontend-card .title {
   padding-top: 15px;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 41px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
   text-align: center;
   color: #000000;
 }
@@ -331,12 +336,16 @@ body {
   height: 70%;
   display: grid;
   justify-items: center;
-  align-content: space-between;
   grid-template-columns: repeat(3, 33%);
 }
+.second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo-wrapper .technology-logo {
-  width: 90px;
-  height: 90px;
+  width: 57%;
+  height: 94%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,8 +520,8 @@ body {
 }
 .service-screen .service-container .service-list-container .service-list .service-list-content .list-item > span {
   font-weight: 400;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 2.5rem;
+  line-height: 3.4rem;
   color: #FFFDFD;
 }
 .service-screen .service-container .service-list-container .service-list .service-list-content .list-item:hover {
