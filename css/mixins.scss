@@ -21,15 +21,15 @@
     display: grid;
     justify-items: center;
     //align-content: space-between;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
 
     .technology-logo-wrapper {
       width: 100%;
+      height: auto;
       display: flex;
       justify-content: center;
       .technology-logo {
-        width: 57%;
-        height: 94%;
         display: flex;
         justify-content: center;
         align-items: center;

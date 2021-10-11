@@ -234,7 +234,7 @@ body {
   margin-top: 70px;
   margin-bottom: 120px;
   width: 480px;
-  height: 270px;
+  height: 180px;
   background: #FFFFFF;
   box-shadow: 7px 5px 7px #ECEEF1;
   border-radius: 21px;
@@ -252,16 +252,16 @@ body {
   height: 70%;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 .second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo-wrapper {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
 }
 .second-screen .second-content-wrapper .left-column .backend-card .logos-wrapper .technology-logo-wrapper .technology-logo {
-  width: 57%;
-  height: 94%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,16 +336,16 @@ body {
   height: 70%;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 .second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo-wrapper {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
 }
 .second-screen .second-content-wrapper .right-column .frontend-card .logos-wrapper .technology-logo-wrapper .technology-logo {
-  width: 57%;
-  height: 94%;
   display: flex;
   justify-content: center;
   align-items: center;
