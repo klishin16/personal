@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsl:stylesheet version = "1.0"
+xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
+	<xsl:template match = "/">
+		<html>
+			<body>
+				<h2>BLOGS- EDUCBA</h2>
+				<xsl:apply-templates select = "articles/article" />
+			</body>
+		</html>
+	</xsl:template>
+	<xsl:template match = "articles/article">
+		<xsl:apply-templates select = "@id" />
+		<xsl:apply-templates select = "name" />
+		<xsl:apply-templates select = "month" />
+		<xsl:apply-templates select = "author" />
+		<xsl:apply-templates select = "feedback" />
+		<br />
+	</xsl:template>
+	<xsl:template match = "@id">
+		<span style = "font-size = 26px;">
+			<xsl:value-of select = "." />
+		</span>
+		<br />
+	</xsl:template>
+	<xsl:template match = "name">
+First Name:<span style = "color:red;">
+		<xsl:value-of select = "." />
+	</span>
+	<br />
+</xsl:template>
+<xsl:template match = "month">
+Last Name:<span style = "color:blue;">
+	<xsl:value-of select = "." />
+</span>
+<br />
+<</xsl:template>
+	<xsl:template match = "author">
+Nick Name:<span style = "color:orange;">
+		<xsl:value-of select = "." />
+	</span>
+	<br />
+</xsl:template>
+<xsl:template match = "feedback">
+Marks:<span style = "color:red;">
+	<xsl:value-of select = "." />
+</span>
+<br />
+</xsl:template>
+</xsl:stylesheet>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+<article id="x34675">
+<name>Apache Spark Architecture</name>
+<month>december</month>
+<author>kay vennisla </author>
+<feedback > high rating</feedback>
+</article>
+<article id="g6754">
+<name>Vue Js Architecture</name>
+<month>January</month>
+<author>Britt kay </author>
+<feedback> medium rating</feedback>
+</article>
+<article id="k9054">
+<name>React for-Loop</name>
+<month>March</month>
+<author> Danny Jack </author>
+<feedback> High rating</feedback>
+</article>
+</articles>
