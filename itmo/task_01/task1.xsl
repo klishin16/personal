@@ -1,10 +1,16 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" encoding="UTF-8" />
   <xsl:template match="/">
+    <html><head><title>Task 1</title></head>
+    <body>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <xsl:apply-templates select = "строка" />
     </math>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    </body></html>
   </xsl:template>
 
   <xsl:template match="строка">
